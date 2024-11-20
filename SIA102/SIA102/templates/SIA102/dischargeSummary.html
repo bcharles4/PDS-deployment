@@ -1,0 +1,192 @@
+{% extends "SIA102/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <title>Patient Discharge Summary</title>
+    <link rel="stylesheet" href="{% static 'SIA102/dischargeRecords.css' %}">
+
+    <!-- Main Content - Patient List -->
+     <div class="dis-con">
+    <div class="dischargeSummary-main">
+        <span class="headerDiv">
+            <h2>Patient Discharge Summary</h2>
+        </span>
+        <!-- Patient Information Section -->
+        <div class="section">
+            <h2>Patient Information</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td>John Doe</td>
+                </tr>
+                <tr>
+                    <th>Patient_Type</th>
+                    <td>Outpatient</td>
+                </tr>
+                <tr>
+                    <th>Age</th>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <th>Sex</th>
+                    <td>Male</td>
+                </tr>
+                <tr>
+                    <th>Date_of_Birth</th>
+                    <td>1979-04-18</td>
+                </tr>
+                <tr>
+                    <th>Admission_Date</th>
+                    <td>2024-09-10</td>
+                </tr>
+                <tr>
+                    <th>Discharge_Date</th>
+                    <td>2024-09-15</td>
+                </tr>
+                <tr>
+                    <th>Attending_Physician</th>
+                    <td>Dr. Smith</td>
+                </tr>
+                <tr>
+                    <th>Diagnosis</th>
+                    <td>Dengue</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Vital Signs Section -->
+        <div class="section">
+            <h2>Vital Signs at Discharge</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Temperature</th>
+                        <th>Pulse</th>
+                        <th>Respiration</th>
+                        <th>Blood_Pressure</th>
+                        <th>Urine</th>
+                        <th>Stool</th>
+                        <th>Hieght</th>
+                        <th>Weight</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- IV Treatments Section -->
+        <div class="section">
+            <h2>IV Treatments</h2>
+            <table>
+                <tr>
+                    <th>Bottle_No</th>
+                    <th>IV_Solution</th>
+                    <th>Volume</th>
+                    <th>Incorporation</th>
+                    <th>Regulation</th>
+                    <th>Start_Time</th>
+                    <th>Time_End</th>
+                    <th>Remarks</th>
+                </tr>
+                <tr>
+                    <td>001</td>
+                    <td>Saline</td>
+                    <td>500ml</td>
+                    <td>Standard</td>
+                    <td>Regulated</td>
+                    <td>15:50</td>
+                    <td>16:20</td>
+                    <td>Stable</td>
+                </tr>
+            </table>
+
+            <h2>IV Side Drip</h2>
+            <table>
+                <tr>
+                    <th>Bottle_No</th>
+                    <th>IV_Solution</th>
+                    <th>Volume</th>
+                    <th>Incorporation</th>
+                    <th>Regulation</th>
+                    <th>Start_Time</th>
+                    <th>Time_End</th>
+                    <th>Remarks</th>
+                </tr>
+                <tr>
+                    <td>001</td>
+                    <td>Saline</td>
+                    <td>500ml</td>
+                    <td>Standard</td>
+                    <td>Regulated</td>
+                    <td>15:50</td>
+                    <td>16:20</td>
+                    <td>Stable</td>
+                </tr>
+            </table>
+
+                <h2>IV Fast Drip</h2>
+                <table>
+                    <tr>
+                        <th>IVF</th>
+                        <th>Volume</th>
+                        <th>Incorporation</th>
+                        <th>Time_Taken</th>
+                        <th>Remarks</th>
+                    </tr>
+                    <tr>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                </table>
+            </table>
+
+        </div>
+
+        <!-- Kardex Medications Section -->
+        <div class="section">
+            <h2>Medications</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Medication_Name</th>
+                        <th>Medication_Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>N/A</td>
+                        <td>N/A</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Footer -->
+        <div class="section">
+            <p><strong>Prepared by:</strong> Nurse C</p>
+            <p><strong>Approved by:</strong> Dr. Smith</p>
+        </div>
+
+            <div class="print-button" style="text-align: center; margin-top: 20px;">
+        <button onclick="window.print()">Patient Discharge Summary</button>
+    </div>
+    </div>
+
+</div>
+
+{% endblock %}

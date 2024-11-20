@@ -1,0 +1,58 @@
+{% extends "SIA102/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <title>Discharge Records</title>
+    <link rel="stylesheet" href="{% static 'SIA102/dischargeRecords.css' %}">
+
+    <div class="main-content">
+        <span class="headerDiv">
+            <h1 style="background-color:#2fe7ce; color: white; padding: 20px; font-size: 50px; text-transform: uppercase; text-align: center;
+            border-top-left-radius: 10px; border-top-right-radius: 10px;">Discharge Records</h1>
+            &ensp;&ensp;&ensp;
+            <br>
+        </span>
+        
+        <table class="patient-table" >
+            <thead>
+                <tr>
+                    <th>Record Number</th>
+                    <th>Patient ID</th>
+                    <th>Patient Fullname</th>
+                    <th>Attending Physician</th>
+                    <th>Discharge Date</th>
+                    <th>Discharge Summary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>P001</td>
+                    <td>Klein Moretti</td>
+                    <td>Dr. Pepper</td>
+                    <td>25/09/2024</td>
+                    <td>
+                        <button onclick="window.location.href='{% url 'dischargeSummary' 'Klein Moretti' %}'">
+                            View Summary
+                        </button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>002</td>
+                    <td>P002</td>
+                    <td>Marshal D. Teach</td>
+                    <td>Nurse Sing</td>
+                    <td>23/09/2024</td>
+                    <td>
+                        <button  onclick="window.location.href='{% url 'dischargeSummary' 'Marshal D. Teach' %}'">
+                            View Summary
+                        </button>
+                    </td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
